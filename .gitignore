@@ -45,3 +45,8 @@ saved_model/
 
 # API runtime
 api/__pycache__/
+venv/
+vitenv/
+__pycache__/
+*.pth
+.DS_Store
