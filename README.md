@@ -1,52 +1,39 @@
-# Plant Health Analysis
-> Image-based plant health analysis using convolutional neural networks and color-space feature engineering.
+## PhytoVision
 
----
+**Next-generation plant pathology via deep learning.**
 
-## Features
-- Image-based plant health and stress classification  
-- CNN models trained on labeled plant imagery  
-- Color-space feature extraction (RGB, HSV, and related transforms)  
-- Modular preprocessing and training pipeline  
-- Designed to support experimentation and iteration  
+-----
 
----
+### Overview
 
-## Why This Exists
-Visual symptoms are one of the earliest indicators of plant stress and disease, but manual inspection does not scale well and can be inconsistent across observers.
+PhytoVision is a high-accuracy neural network architecture designed to automate plant health diagnosis. Developed to bridge the gap between computer vision research and agricultural deployment, the system classifies botanical diseases with a focus on real-world greenhouse applications.
 
-This project explores how image data, combined with learned features and explicit color-space representations, can be used to analyze plant health in a more systematic and repeatable way.
+### Technical Specifications
 
----
+  * **Architecture:** Custom Convolutional Neural Network (CNN) designed for high-resolution image classification.
+  * **Dataset:** Trained on a proprietary/aggregated corpus of **395K+ images**.
+  * **Performance:** Achieved **95%+ validation accuracy** across 5 distinct disease classes.
+  * **Stack:** PyTorch, Python, [PhytoVision Repository](https://github.com/v1shay/phyto-vision).
 
-## How It Works
-The system follows a standard but flexible analysis pipeline.
+-----
 
-1. Images are collected and normalized  
-2. Color-space features are extracted alongside raw pixel data  
-3. A convolutional neural network learns discriminative patterns  
-4. Predictions are evaluated against labeled health conditions  
+### Deployment & Research
 
-The pipeline is modular so individual components can be swapped or extended.
+The project was presented to the **Environmental Science Department at UC Santa Cruz** for integration into automated greenhouse monitoring systems. By leveraging optimized inference pipelines, PhytoVision enables real-time health tracking to prevent crop loss.
 
----
+-----
 
-## Tech Stack
-- **Language:** Python  
-- **ML:** Convolutional Neural Networks  
-- **Libraries:** PyTorch / TensorFlow, OpenCV, NumPy  
-- **Architecture:** Modular training and evaluation pipeline  
+### Interface
 
----
+\<p align="center"\>
+\<img width="862" src="[https://github.com/user-attachments/assets/f3741a52-1f1e-4214-9b7e-172da1dca5f3](https://github.com/user-attachments/assets/f3741a52-1f1e-4214-9b7e-172da1dca5f3)" alt="PhytoVision Dashboard Screenshot" /\>
+\</p\>
 
-## Project Structure
-```text
-plant-health-analysis/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── models/
-├── features/
-├── training/
-├── evaluation/
-└── README.md
+-----
+
+### Engineering Roadmap
+
+  * [x] Initial CNN Architecture Design
+  * [x] Large-scale training on 395K+ samples
+  * [ ] Multi-modal data integration (humidity/temp)
+  * [ ] Edge device optimization for mobile deployment
