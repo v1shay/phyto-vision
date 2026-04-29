@@ -1,37 +1,136 @@
-## PhytoVision
+<div align="center">
 
-**Next-generation plant pathology via deep learning.**
+<h1>PhytoVision</h1>
+
+<p><strong>Computer vision-powered deep learning for plant health diagnosis.</strong></p>
+
+</div>
+
+---
+
+## Results
+
+- **Accuracy:** 95%+ validation accuracy  
+- **Dataset:** 395K+ plant images (Kaggle, PlantVillage) 
+- **Classes:** 5 plant disease categories  
+- **Model:** Custom CNN image-classification architecture  
+- **Deployment:** Presented to the UC Santa Cruz Environmental Science Department for potential greenhouse integration  
+
+---
+
+## Overview
+
+PhytoVision is a computer vision system for detecting plant disease from leaf imagery. The system uses a convolutional neural network to classify plant health conditions from high-resolution image inputs, with emphasis on real-world greenhouse monitoring.
+
+The pipeline converts raw plant images into normalized tensors, applies supervised deep learning, and outputs disease classifications that can support early diagnosis and crop-loss prevention.
+
+---
+
+## Method / Approach
 
 <p align="center">
-  <img width="1059" height="635" src="https://github.com/user-attachments/assets/65195b0e-da3f-46dc-be85-016a568bd563" alt="PhytoVision Dashboard Screenshot" />
+  <img width="1059" height="635" alt="PhytoVision Dashboard Screenshot" src="https://github.com/user-attachments/assets/65195b0e-da3f-46dc-be85-016a568bd563" />
 </p>
 
------
+- **Image Standardization**  
+  Plant images are resized, normalized, and prepared for CNN-based inference.
 
-### Overview
+- **Feature Learning**  
+  The CNN learns visual disease markers directly from image data, including:
+  - leaf discoloration patterns  
+  - lesion texture and shape  
+  - edge degradation and surface irregularities  
 
-PhytoVision is a high-accuracy neural network architecture designed to automate plant health diagnosis. Developed to bridge the gap between computer vision research and agricultural deployment, the system classifies botanical diseases with a focus on real-world greenhouse applications.
+- **Supervised Classification**  
+  Models map image features → plant health class:
+  - disease classification objective  
+  - 5-category output space  
 
-### Technical Specifications
+- **Evaluation + Deployment Path**  
+  Models are validated on held-out image data and designed for greenhouse monitoring integration.
 
-  * **Architecture:** Custom Convolutional Neural Network (CNN) designed for high-resolution image classification.
-  * **Dataset:** Trained on a proprietary/aggregated corpus of **395K+ images**.
-  * **Performance:** Achieved **95%+ validation accuracy** across 5 distinct disease classes.
-  * **Stack:** PyTorch, Python, [PhytoVision Repository](https://github.com/v1shay/phyto-vision).
+---
 
------
+## Data
 
-### Deployment & Research
+- **Source:** proprietary / aggregated plant image corpus  
+- **Type:** high-resolution plant disease image dataset  
+- **Size:** 395K+ images  
+- **Classes:** 5 disease categories  
 
-The project was presented to the **Environmental Science Department at UC Santa Cruz** for integration into automated greenhouse monitoring systems. By leveraging optimized inference pipelines, PhytoVision enables real-time health tracking to prevent crop loss.
+<p align="center">
+  <img width="1536" height="1024" alt="PhytoVision Plant Disease Image Grid" src="https://github.com/user-attachments/assets/4bdb993a-533b-4f8d-b462-300c969a59d3" />
+</p>
 
------
+Preprocessing:
+- image resizing  
+- normalization  
+- augmentation  
+- train / validation partitioning  
 
+---
 
+## Experiments / Reproduction
 
-### Engineering Roadmap
+```bash
+python training/train.py
+python evaluation/evaluate.py
+````
 
-  * [x] Initial CNN Architecture Design
-  * [x] Large-scale training on 395K+ samples
-  * [ ] Multi-modal data integration (humidity/temp)
-  * [ ] Edge device optimization for mobile deployment
+## Run inference:
+
+```bash
+python api/infer.py --input sample_leaf.jpg
+```
+
+## Train model:
+
+```bash
+python training/train.py --config configs/default.yaml
+```
+
+Input: plant image
+Output: disease class + confidence score
+
+Dependencies
+
+```bash
+Python 3.x
+NumPy
+PyTorch
+TorchVision
+Pillow
+OpenCV
+FastAPI / Flask
+```
+
+## Repository Structure
+
+```bash
+phytovision/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── models/
+├── training/
+├── api/
+├── evaluation/
+├── notebooks/
+└── README.md
+```
+
+## Installation
+
+```bash
+git clone https://github.com/v1shay/phyto-vision.git
+cd phyto-vision
+pip install -r requirements.txt
+```
+
+## Optional:
+
+```bash
+conda env create -f environment.yml
+conda activate phytovision
+```
+
