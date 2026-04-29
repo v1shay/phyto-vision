@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>PhytoVision</h1>
+<h1>Phyto-Vision</h1>
 
 <p><strong>Computer vision-powered deep learning for plant health diagnosis.</strong></p>
 
