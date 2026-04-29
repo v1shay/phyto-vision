@@ -2,6 +2,10 @@
 
 **Next-generation plant pathology via deep learning.**
 
+<p align="center">
+  <img width="1059" height="635" src="https://github.com/user-attachments/assets/65195b0e-da3f-46dc-be85-016a568bd563" alt="PhytoVision Dashboard Screenshot" />
+</p>
+
 -----
 
 ### Overview
@@ -23,11 +27,7 @@ The project was presented to the **Environmental Science Department at UC Santa 
 
 -----
 
-<p align="center">
-  <img width="1059" height="635" src="https://github.com/user-attachments/assets/65195b0e-da3f-46dc-be85-016a568bd563" alt="PhytoVision Dashboard Screenshot" />
-</p>
 
----
 
 ### Engineering Roadmap
 
