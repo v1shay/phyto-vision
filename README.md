@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Phyto-Vision</h1>
+<h1><img width="1086" height="362" alt="ChatGPT Image Aug 12, 2026, 01_51_33 AM" src="https://github.com/user-attachments/assets/6ad88c9f-247c-43aa-a0e1-af0a73388245" /></h1>
 
 <p><strong>Computer vision-powered deep learning for plant health diagnosis.</strong></p>
 
